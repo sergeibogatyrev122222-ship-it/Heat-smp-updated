@@ -204,7 +204,7 @@ public class RodManager {
         if (onCooldown(emberLeftCd, player, 5000)) { sendCd(player, emberLeftCd, player.getUniqueId(), 5000); return; }
         if (hm.getHeat(player) < 15) { noHeat(player); return; }
 
-        Vector dir = player.getLocation().getDirection().negate().multiply(2.2);
+        Vector dir = player.getLocation().getDirection().multiply(-2.2);
         dir.setY(0.5);
         player.setVelocity(dir);
         player.getWorld().spawnParticle(Particle.FLAME, player.getLocation().add(0,1,0), 15, 0.5, 0.3, 0.5, 0.08);
